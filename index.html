@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,10 @@
 	<div class="wrap">
 		
 		<section class="main">
+			<div id="video_bg">
+			    <video preload="auto" loop="loop" autoplay="autoplay" src="video_src/bcg_video.mp4" id="video" muted="" poster="img/bcg_main-desktop.png">
+			    </video>
+			</div>
 			<div class="container">
 				<header>
 					<div class="logo_wrap"><img src="img/logo.png" alt="logo"></div>
@@ -60,7 +64,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="playerButton"><img src="img/play_button.png" alt="play" class="active"><img src="img/pause_button.png" alt="pause" class=""></div>
+				<div id="playerButton"><img src="img/play_button.png" alt="play" class=""  onclick="play()"><img src="img/pause_button.png" alt="pause" class="active"  onclick="pause()"></div>
 			</div>
 		</section>
 		<section class="communication">
@@ -503,15 +507,25 @@
 							<div class="form_wrap">
 								<div class="adult_only">18+</div>
 								<input type="text" required placeholder="Имя*">
-								<input type="phone" required placeholder="Телефон*">
+								<div class="input_wrap phone">
+									<input type="phone" required placeholder="Телефон*" id="phone">
+								</div>
 								<input type="email" required placeholder="email*">
-								<input type="number" required placeholder="Возраст*">
+								<div class="input_wrap">
+									<input type="number" required placeholder="Возраст*">
+								</div>
 								<input type="radio" name="workPlace" id="fromOffice" checked> <label for="fromOffice">Работать на студии</label>
 								<input type="radio" name="workPlace" id="fromHome"> <label for="fromHome">Работать на дому</label>
 								<textarea id="" placeholder="Расскажите немного о себе"></textarea>
 								<textarea id="" placeholder="Опишите параметры вашего компьютера. Есть ли камера?"></textarea>
 							</div>
-							<div class="upload_wrap"><p>Загрузите свои фотографии не более 5. (лицо, полный рост)*</p></div>
+							<div class="upload_wrap">
+								<input type="file" name="files[5]" id="upload-file__input_1" class="upload-file__input" accept=".jpg, .jpeg, .png, .gif, .bmp, .tar, .zip, .7z, .7zip"  multiple>
+        						<label class="upload-file__label" for="upload-file__input_1">
+        							<p><img src="img/attach_icon.png" alt="">Загрузите свои фотографии не более 5. ( лицо, полный рост)*</p>
+            						<span class="upload-file__text">Обзор</span>
+        						</label>
+							</div>
 							<div class="submit_row">
 								<div class="checkbox_wrap">
 									<input type="checkbox" id="policyMain"><label for="policyMain">Я принимаю <a href="#">Пользовательское соглашение</a> и <a href="#">Политику конфиденциальности</a></label>
@@ -703,6 +717,7 @@
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
 	<script src="lib/slick/slick.js"></script>
+	<script src="lib/ddslick-master/jquery.ddslick.min.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
