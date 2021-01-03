@@ -13,6 +13,24 @@
 <body>
 
 	<div class="wrap">
+		<div class="mobile" id="menu">
+			<div class="close">
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="navigation">
+				<li><a href="#">Условия работы</a></li>
+				<li><a href="#">О студии</a></li>
+				<li><a href="#">Ваш доход</a></li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">Схема работы</a></li>
+			</ul>
+			<ul class="links">
+				<li><a href="#">Анкета</a></li>
+				<li><a href="#">Блог</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</div>
 		
 		<section class="main">
 			<div id="video_bg">
@@ -21,6 +39,11 @@
 			</div>
 			<div class="container">
 				<header>
+					<div class="mobile menu_trigger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<div class="logo_wrap"><img src="img/logo.png" alt="logo"></div>
 					<ul class="navigation">
 						<li><a href="#">Условия работы</a></li>
@@ -42,7 +65,11 @@
 					<div class="left_part">
 						<p class="title">Вебкам студия</p>
 						<h1>Ваниль</h1>
-						<p>Стань успешной стрим-моделью. Раскрой свои таланты! Заполняй анкету. Общайся в видео-чатах и зарабатывай! Ежедневные выплаты. Высокие доходы!</p>
+						<p>
+							<span>Стань успешной стрим-моделью. Раскрой свои таланты! </span>
+							<span>Заполняй анкету. Общайся в видео-чатах и зарабатывай! </span>
+							<span>Ежедневные выплаты. Высокие доходы!</span>
+						</p>
 						<a href="#" class="button">Узнать детали</a>
 					</div>
 					<div class="right_part">
@@ -196,10 +223,10 @@
 								<input type="radio" id="workdays6" value="6" name="wordays">
 								<label for="workdays6">6</label>
 								<div class="notification">
+									<div class="trigger">?</div>
 									<div class="notification_wrap">
 										<p>Работать один день в неделю нет смысла (как и дохода). Шестидневка вас скорее вымотает, чем позволит заработать больше</p>
 									</div>
-									<div class="trigger">?</div>
 								</div>
 							</div>
 						</div>
@@ -219,10 +246,10 @@
 								<input type="radio" id="english5" value="5" name="english">
 								<label for="english5">5</label>
 								<div class="notification">
+									<div class="trigger">?</div>
 									<div class="notification_wrap">
 										<p>Работать один день в неделю нет смысла (как и дохода). Шестидневка вас скорее вымотает, чем позволит заработать больше</p>
 									</div>
-									<div class="trigger">?</div>
 								</div>
 							</div>
 						</div>
@@ -236,10 +263,10 @@
 								<input type="radio" id="hoursPerDay9" value="9" name="hoursPerDay">
 								<label for="hoursPerDay9">9</label>
 								<div class="notification">
+									<div class="trigger">?</div>
 									<div class="notification_wrap">
 										<p>Работать один день в неделю нет смысла (как и дохода). Шестидневка вас скорее вымотает, чем позволит заработать больше</p>
 									</div>
-									<div class="trigger">?</div>
 								</div>
 							</div>
 						</div>
@@ -259,10 +286,10 @@
 								<input type="radio" id="experience5" value="5" name="experience">
 								<label for="experience5">5</label>
 								<div class="notification">
+									<div class="trigger">?</div>
 									<div class="notification_wrap">
 										<p>Работать один день в неделю нет смысла (как и дохода). Шестидневка вас скорее вымотает, чем позволит заработать больше</p>
 									</div>
-									<div class="trigger">?</div>
 								</div>
 							</div>
 						</div>
@@ -511,7 +538,7 @@
 									<input type="phone" required placeholder="Телефон*" id="phone">
 								</div>
 								<input type="email" required placeholder="email*">
-								<div class="input_wrap">
+								<div class="input_wrap age">
 									<input type="number" required placeholder="Возраст*">
 								</div>
 								<input type="radio" name="workPlace" id="fromOffice" checked> <label for="fromOffice">Работать на студии</label>

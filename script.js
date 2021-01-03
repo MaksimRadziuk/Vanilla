@@ -23,9 +23,17 @@ $(document).ready(function(){
 	      }
 	    },
 	    {
-	      breakpoint: 480,
+	      breakpoint: 971,
 	      settings: {
-	        slidesToShow: 1,
+	        slidesToShow: 3,
+	        slidesToScroll: 1
+	      }
+	    },
+	    {
+	      breakpoint: 641,
+	      settings: {
+	        arrows:false,
+	        slidesToShow: 3,
 	        slidesToScroll: 1
 	      }
 	    }
@@ -55,8 +63,24 @@ $(document).ready(function(){
 	      }
 	    },
 	    {
-	      breakpoint: 480,
+	      breakpoint: 971,
 	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1
+	      }
+	    },
+	    {
+	      breakpoint: 641,
+	      settings: {
+	        arrows:false,
+	        slidesToShow: 2,
+	        slidesToScroll: 1
+	      }
+	    },
+	    {
+	      breakpoint: 501,
+	      settings: {
+	        arrows:false,
 	        slidesToShow: 1,
 	        slidesToScroll: 1
 	      }
@@ -86,8 +110,10 @@ $(document).ready(function(){
 	      }
 	    },
 	    {
-	      breakpoint: 480,
+	      breakpoint: 641,
 	      settings: {
+	        arrows:false,
+	        autoplay:true,
 	        slidesToShow: 1,
 	        slidesToScroll: 1
 	      }
@@ -103,6 +129,12 @@ $(document).ready(function(){
 		$('#playerButton img').toggleClass('active');
 	});
 
+	$('.menu_trigger').click(function(){
+		$('#menu').toggleClass('active');
+	})
+	$('#menu .close').click(function(){
+		$('#menu').toggleClass('active');
+	})
 
 });
 
